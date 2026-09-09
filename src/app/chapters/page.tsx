@@ -1,10 +1,11 @@
+export const dynamic = 'force-dynamic';
 import React from 'react';
 import { prisma } from '@/lib/prisma';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { ChaptersClientDirectory } from './ChaptersClientDirectory';
 
-export const dynamic = 'force-dynamic';
+
 
 export default async function ChaptersPage() {
   const chapters = await prisma.chapter.findMany({
