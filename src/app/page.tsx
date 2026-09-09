@@ -20,7 +20,6 @@ import { prisma } from '@/lib/prisma';
 import { ChapterCard } from '@/components/chapters/ChapterCard';
 import { EventCard } from '@/components/events/EventCard';
 
-export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const chapters = await prisma.chapter.findMany({
