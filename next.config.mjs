@@ -10,6 +10,13 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client'],
+    outputFileTracingIncludes: {
+      '/**': ['./prisma/dev.db'],
+    },
+  },
 };
 
 export default nextConfig;
+
